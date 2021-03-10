@@ -1,7 +1,6 @@
 package comec.ricerca.model;
 
 import java.io.BufferedReader;
-
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -26,7 +25,7 @@ public class Model {
 	
 	public void readFile() {
 		try {
-			BufferedReader br = new BufferedReader (new FileReader("C:\\Users\\um_bi\\Desktop\\CO.MEC\\DB_Uchiyama.txt"));
+			BufferedReader br = new BufferedReader (new FileReader("DB_Uchiyama.txt"));
 			String riga = br.readLine();
 			Item item = null;
 			while(riga!=null) {
