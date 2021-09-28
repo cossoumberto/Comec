@@ -1,31 +1,37 @@
 package comec.ricerca.model;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.BufferedReader;
+//import java.io.BufferedWriter;
+//import java.io.FileReader;
+//import java.io.FileWriter;
+//import java.io.IOException;
+//import java.io.PrintWriter;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import comec.ricerca.db.DAO;
 import comec.ricerca.model.Item.Categoria;
 
 public class Model {
 	
-	List<Item> uchiyama;
+	List<Item> items;
 	List<String> materials;
+	DAO dao;
 	
 	public Model() {
-		this.uchiyama = new ArrayList<>();
+		this.items = new ArrayList<>();
 		this.materials = new ArrayList<>();
-		this.readFile();
+		//this.readFile();
+		dao = new DAO();
+		dao.loadAll(items, materials);
 	}
 	
+	/*
 	public void readFile() {
 		try {
-			BufferedReader br = new BufferedReader (new FileReader("DB_Uchiyama.txt"));
+			BufferedReader br = new BufferedReader (new FileReader("items.txt"));
 			String riga = br.readLine();
 			Item item = null;
 			while(riga!=null) {
@@ -43,19 +49,20 @@ public class Model {
 					if(!materials.contains(s[2]))
 						materials.add(s[2]);
 				if(item!=null)
-					uchiyama.add(item);
+					items.add(item);
 				riga = br.readLine();
 			}
-			//System.out.print(uchiyama);
+			//System.out.print(items);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Errore apertura file");
 		}
 	}
+	*/
 	
 	public List<Item> getS1() {
 		List <Item> list = new ArrayList<>();
-		for(Item i : uchiyama) {
+		for(Item i : items) {
 			if(i.getCategoria()==Categoria.S1)
 				list.add(i);
 		}
@@ -65,7 +72,7 @@ public class Model {
 	
 	public List<Item> getS2() {
 		List <Item> list = new ArrayList<>();
-		for(Item i : uchiyama) {
+		for(Item i : items) {
 			if(i.getCategoria()==Categoria.S2)
 				list.add(i);
 		}
@@ -75,7 +82,7 @@ public class Model {
 	
 	public List<Item> getOthers() {
 		List <Item> list = new ArrayList<>();
-		for(Item i : uchiyama) {
+		for(Item i : items) {
 			if(i.getCategoria()!=Categoria.S1 && i.getCategoria()!=Categoria.S2)
 				list.add(i);
 		}
@@ -117,10 +124,13 @@ public class Model {
 		}
 	}
 	
-	
-
 	public Item inserisci(Item item) {
-		String path = "C:\\Users\\um_bi\\Desktop\\CO.MEC\\DB_Uchiyama.txt";
+		items.add(item);
+		return dao.inserisci(item);
+	}
+	/*
+	public Item inserisci(Item item) {
+		String path = "items.txt";
 		try {
 			FileWriter fw = new FileWriter(path, true);
 			BufferedWriter bw = new BufferedWriter(fw);
@@ -133,11 +143,14 @@ public class Model {
 			e.printStackTrace();
 			System.out.println("Errore scrittura file");
 		}
-		uchiyama.add(item);
+		items.add(item);
 		return item;
 	}
+	*/
 
 	public Item aggiorna(Item item, String codice, Categoria categoria, String materiale, Double dint, Double dest, Double h, Double sp) {
+		Item oldItem = new Item (item.getCodice(), item.getCategoria(), item.getMateriale(),
+				item.getDint(), item.getDest(), item.getH(), item.getSp());
 		if(codice!=null && !codice.equals(""))
 			item.setCodice(codice);
 		if(categoria!=null)
@@ -152,12 +165,30 @@ public class Model {
 			item.setH(h);
 		if(sp!=null)
 			item.setSp(sp);
-		String path = "C:\\Users\\um_bi\\Desktop\\CO.MEC\\DB_Uchiyama.txt";
+		dao.elimina(oldItem);
+		return dao.inserisci(item);
+	}
+		/*
+		if(codice!=null && !codice.equals(""))
+			item.setCodice(codice);
+		if(categoria!=null)
+			item.setCategoria(categoria);
+		if(materiale!=null)
+			item.setMateriale(materiale);
+		if(dint!=null)
+			item.setDint(dint);
+		if(dest!=null)
+			item.setDest(dest);
+		if(h!=null)
+			item.setH(h);
+		if(sp!=null)
+			item.setSp(sp);
+		String path = "items.txt";
 		try {
 			FileWriter fw = new FileWriter(path, false);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter pw = new PrintWriter(bw);
-			for(Item i : uchiyama)
+			for(Item i : items)
 				pw.println(i.toFile());
 			pw.flush();
 			pw.close();
@@ -167,16 +198,19 @@ public class Model {
 			System.out.println("Errore scrittura file");
 		}
 		return item;
-	}
+		*/
 
 	public Item elimina(Item item) {
-		uchiyama.remove(item);
-		String path = "C:\\Users\\um_bi\\Desktop\\CO.MEC\\DB_Uchiyama.txt";
+		items.remove(item);
+		return dao.elimina(item);
+	}
+		/*
+		String path = "items.txt";
 		try {
 			FileWriter fw = new FileWriter(path, false);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter pw = new PrintWriter(bw);
-			for(Item i : uchiyama)
+			for(Item i : items)
 				pw.println(i.toFile());
 			pw.flush();
 			pw.close();
@@ -185,8 +219,7 @@ public class Model {
 			e.printStackTrace();
 			System.out.println("Errore scrittura file");
 		}
-		return item;
-	}
+		return item;*/
 	
 	
 	

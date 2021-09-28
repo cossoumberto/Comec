@@ -21,7 +21,7 @@ public class Item implements Comparable<Item> {
 			this.sp = sp;
 			this.h = h;
 		}
-		
+
 		public String getCodice() {
 			return codice;
 		}

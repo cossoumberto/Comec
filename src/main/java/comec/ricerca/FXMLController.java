@@ -741,7 +741,6 @@ public class FXMLController {
     @FXML
     void writingNewMaterial(MouseEvent event) {
     	aggBoxMateriale.setValue(null);
-
     }
     
     //
