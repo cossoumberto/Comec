@@ -174,6 +174,47 @@ public class FXMLController {
 
     @FXML // fx:id="aggTxtResult"
     private TextArea aggTxtResult; // Value injected by FXMLLoader
+    
+    //SEZIONE VALUTA
+    
+    @FXML // fx:id="valTxtSp"
+    private TextField valTxtSp; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valTxtDint"
+    private TextField valTxtDint; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valTxtDest"
+    private TextField valTxtDest; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valTxtH"
+    private TextField valTxtH; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valBoxMateriale"
+    private ComboBox<String> valBoxMateriale; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valCheckS1"
+    private CheckBox valCheckS1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valCheckS2"
+    private CheckBox valCheckS2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valCheckAltro"
+    private CheckBox valCheckAltro; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valTxtNPezzi"
+    private TextField valTxtNPezzi; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valTxtPrezzo"
+    private TextField valTxtPrezzo; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnValuta"
+    private Button btnValuta; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valTxtResult"
+    private TextArea valTxtResult; // Value injected by FXMLLoader
+
+    @FXML // fx:id="valBtnReset"
+    private Button valBtnReset; // Value injected by FXMLLoader
 
     
     //FUNZIONI SEZIONE RICERCA
@@ -743,7 +784,17 @@ public class FXMLController {
     	aggBoxMateriale.setValue(null);
     }
     
-    //
+    //FUNZIONI SEZIONE VALUTA
+    
+    @FXML
+    void valReset(ActionEvent event) {
+
+    }
+
+    @FXML
+    void valuta(ActionEvent event) {
+
+    }
     
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
@@ -787,6 +838,19 @@ public class FXMLController {
         assert aggBtnElimina != null : "fx:id=\"aggBtnElimina\" was not injected: check your FXML file 'Scene.fxml'.";
         assert aggBtnReset != null : "fx:id=\"aggBtnReset\" was not injected: check your FXML file 'Scene.fxml'.";
         assert aggTxtResult != null : "fx:id=\"aggTxtResult\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtSp != null : "fx:id=\"valTxtSp\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtDint != null : "fx:id=\"valTxtDint\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtDest != null : "fx:id=\"valTxtDest\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtH != null : "fx:id=\"valTxtH\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valBoxMateriale != null : "fx:id=\"valBoxMateriale\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valCheckS1 != null : "fx:id=\"valCheckS1\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valCheckS2 != null : "fx:id=\"valCheckS2\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valCheckAltro != null : "fx:id=\"valCheckAltro\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtNPezzi != null : "fx:id=\"valTxtNPezzi\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtPrezzo != null : "fx:id=\"valTxtPrezzo\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert btnValuta != null : "fx:id=\"btnValuta\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valTxtResult != null : "fx:id=\"valTxtResult\" was not injected: check your FXML file 'Scene.fxml'.";
+        assert valBtnReset != null : "fx:id=\"valBtnReset\" was not injected: check your FXML file 'Scene.fxml'.";
     }
     
     public void setModel (Model model) {
