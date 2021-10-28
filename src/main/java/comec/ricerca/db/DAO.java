@@ -8,10 +8,11 @@ import java.util.List;
 
 import comec.ricerca.model.Item;
 import comec.ricerca.model.Item.Categoria;
+import comec.ricerca.model.Vendita;
 
 public class DAO {
 	
-	public void loadAll(List<Item> items, List<String> materials){
+	public void loadAllItems(List<Item> items, List<String> materials){
 		String sql = "SELECT * from items";
 		try {
 			Connection conn = DBConnect.getConnection();
@@ -51,8 +52,8 @@ public class DAO {
 			else
 				st.setString(2, item.getCategoria().toString());
 			st.setString(3, item.getMateriale());
-			st.setDouble(4, item.getDest());
-			st.setDouble(5, item.getDint());
+			st.setDouble(4, item.getDint());
+			st.setDouble(5, item.getDest());
 			st.setDouble(6, item.getSp());
 			st.setDouble(7, item.getH());
 			st.executeQuery() ;
@@ -80,4 +81,27 @@ public class DAO {
 		throw new RuntimeException("Error Connection Database");
 		}
 	}
+
+	public void loadVendite(List<Vendita> vendite, List<Item> items) {
+		String sql = "SELECT * FROM vendite_2019";
+		try {
+			Connection conn = DBConnect.getConnection();
+			PreparedStatement st = conn.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while (rs.next()) {
+				String codice = rs.getString("item");
+				for(Item i : items)
+					if(i.getCodice().equals(codice)) {
+						vendite.add(new Vendita(i, rs.getInt("num_pezzi"), rs.getDouble("importo"), rs.getDouble("costo_primo")));
+						break;
+					}
+			}
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Errore connessione al database");
+			throw new RuntimeException("Error Connection Database");
+			}	
+	}
+	
 }

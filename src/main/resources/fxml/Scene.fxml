@@ -40,68 +40,6 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btnSpMaxEqualsMin" mnemonicParsing="false" onAction="#spMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                        <TextField fx:id="txtMinSp" onMouseClicked="#setMinSpEditable" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextField fx:id="txtMaxDint" onMouseClicked="#setMaxDintEditable" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <Button fx:id="btnDintMinEqualsMax" mnemonicParsing="false" onAction="#dintMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                        <Label alignment="TOP_LEFT" text="Diametro interno" textAlignment="JUSTIFY" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <TextField fx:id="txtMinDint" onMouseClicked="#setMinDintEditable" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <Button fx:id="btnDintMaxEqualsMin" mnemonicParsing="false" onAction="#dintMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                        <Label text="Spessore" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                        <Button fx:id="btnSpMinEqualsMax" mnemonicParsing="false" onAction="#spMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                        <TextField fx:id="txtMaxSp" onMouseClicked="#setMaxSpEditable" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <Label text="Materiale" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <Label text="Diametro esterno" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <Label text="Altezza" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                        <TextField fx:id="txtMinDest" onMouseClicked="#setMinDestEditable" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <Button fx:id="btnDestMinEqualsMax" mnemonicParsing="false" onAction="#destMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <TextField fx:id="txtMinH" onMouseClicked="#setMinHEditable" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextField fx:id="txtMaxDest" onMouseClicked="#setMaxDestEditable" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextField fx:id="txtMaxH" onMouseClicked="#setMaxHEditable" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <Button fx:id="btnHMinEqualsMax" mnemonicParsing="false" onAction="#hMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Button fx:id="btnDestMaxEqualsMin" mnemonicParsing="false" onAction="#destMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <Button fx:id="btnHMaxEqualsMin" mnemonicParsing="false" onAction="#hMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                        <ComboBox fx:id="boxMaterial" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </ComboBox>
                         <Label text="Tipologia" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
                         <CheckBox fx:id="checkS1" mnemonicParsing="false" text="S1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                            <GridPane.margin>
@@ -117,6 +55,68 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </CheckBox>
+                        <Label text="Materiale" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ComboBox fx:id="boxMaterial" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label alignment="TOP_LEFT" text="Diametro interno" textAlignment="JUSTIFY" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="txtMinDint" onAction="#setMinDintEditableAction" onMouseClicked="#setMinDintEditableMouse" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnDintMinEqualsMax" mnemonicParsing="false" onAction="#dintMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <TextField fx:id="txtMaxDint" onAction="#setMaxDintEditableAction" onMouseClicked="#setMaxDintEditableMouse" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnDintMaxEqualsMin" mnemonicParsing="false" onAction="#dintMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label text="Diametro esterno" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <TextField fx:id="txtMinDest" onAction="#setMinDestEditableAction" onMouseClicked="#setMinDestEditableMouse" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnDestMinEqualsMax" mnemonicParsing="false" onAction="#destMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <TextField fx:id="txtMaxDest" onAction="#setMaxDestEditableAction" onMouseClicked="#setMaxDestEditableMouse" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnDestMaxEqualsMin" mnemonicParsing="false" onAction="#destMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Label text="Altezza" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <TextField fx:id="txtMinH" onAction="#setMinHEditableAction" onMouseClicked="#setMinHEditableMouse" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnHMinEqualsMax" mnemonicParsing="false" onAction="#hMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtMaxH" onAction="#setMaxHEditableAction" onMouseClicked="#setMaxHEditableMouse" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="Spessore" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <Button fx:id="btnHMaxEqualsMin" mnemonicParsing="false" onAction="#hMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <TextField fx:id="txtMinSp" onAction="#setMinSpEditableAction" onMouseClicked="#setMinSpEditableMouse" promptText="Min" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnSpMinEqualsMax" mnemonicParsing="false" onAction="#spMinEqualsMax" text="=Max" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <TextField fx:id="txtMaxSp" onAction="#setMaxSpEditableAction" onMouseClicked="#setMaxSpEditableMouse" promptText="Max" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="btnSpMaxEqualsMin" mnemonicParsing="false" onAction="#spMaxEqualsMin" text="=Min" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                      </children>
                      <VBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -283,81 +283,60 @@
          <content>
             <VBox>
                <children>
-                  <GridPane>
+                  <GridPane fx:id="valConfronta">
                      <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="105.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="152.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="64.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="105.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="152.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="136.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="120.0" prefWidth="160.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="136.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="120.0" prefWidth="160.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <TextField fx:id="valTxtSp" onMouseClicked="#setMinSpEditable" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Label text="Tipologia" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="valRadioS1" mnemonicParsing="false" text="S1" GridPane.columnIndex="1">
                            <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets left="10.0" />
                            </GridPane.margin>
-                        </TextField>
-                        <Label alignment="TOP_LEFT" text="Diametro interno" textAlignment="JUSTIFY" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        </RadioButton>
+                        <RadioButton fx:id="valRadioS2" mnemonicParsing="false" text="S2" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="valRadioAltro" mnemonicParsing="false" text="Altro" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="90.0" />
+                           </GridPane.margin>
+                        </RadioButton>
+                        <Label alignment="TOP_LEFT" text="Diametro interno" textAlignment="JUSTIFY" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin>
                         </Label>
-                        <TextField fx:id="valTxtDint" onMouseClicked="#setMinDintEditable" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <TextField fx:id="valTxtDint" onAction="#valSetDintEditableAction" onMouseClicked="#valSetDintEditableMouse" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </GridPane.margin>
                         </TextField>
-                        <Label text="Spessore" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <Label text="Materiale" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <Label text="Diametro esterno" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                        <Label text="Altezza" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <TextField fx:id="valTxtDest" onMouseClicked="#setMinDestEditable" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Label text="Diametro esterno" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <TextField fx:id="valTxtDest" onAction="#valSetDestEditableAction" onMouseClicked="#valSetDestEditableMouse" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </GridPane.margin>
                         </TextField>
-                        <TextField fx:id="valTxtH" onMouseClicked="#setMinHEditable" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Label text="Altezza" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <TextField fx:id="valTxtH" onAction="#valSetHEditableAction" onMouseClicked="#valSetHEditableMouse" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </GridPane.margin>
                         </TextField>
-                        <ComboBox fx:id="valBoxMateriale" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </ComboBox>
-                        <Label text="Tipologia" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-                        <CheckBox fx:id="valCheckS1" mnemonicParsing="false" text="S1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets left="10.0" />
-                           </GridPane.margin>
-                        </CheckBox>
-                        <CheckBox fx:id="valCheckS2" mnemonicParsing="false" text="S2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets left="90.0" />
-                           </GridPane.margin>
-                        </CheckBox>
-                        <CheckBox fx:id="valCheckAltro" mnemonicParsing="false" text="Altro" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets left="10.0" />
-                           </GridPane.margin>
-                        </CheckBox>
-                        <Label text="Num. pezzi richiesti" GridPane.rowIndex="5" />
-                        <TextField fx:id="valTxtNPezzi" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <Label text="Prezzo proposto" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <TextField fx:id="valTxtPrezzo" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                        <Label text="Spessore" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <TextField fx:id="valTxtSp" onAction="#valSetSpEditableAction" onMouseClicked="#valSetSpEditableMouse" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </GridPane.margin>
@@ -367,11 +346,100 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </VBox.margin>
                   </GridPane>
-                  <Button fx:id="btnValuta" mnemonicParsing="false" onAction="#valuta" text="Valuta">
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="520.0" minWidth="10.0" prefWidth="507.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="160.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label text="Vedi le" />
+                              <TextField fx:id="valTxtNumVar" onAction="#valSetNumVEditableAction" onMouseClicked="#valSetNumVEditableMouse" prefHeight="25.0" prefWidth="100.0" promptText="num">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="variazioni di peso maggiori" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="valBtnConfronta" mnemonicParsing="false" onAction="#valConfronta" text="Confronta" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Button>
+                        <Label text="Aggiorna elenco con solo item con costi disponibili" GridPane.rowIndex="1" />
+                        <Button fx:id="valBtnAggiorna" mnemonicParsing="false" onAction="#valAggiorna" text="Aggiorna" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Button>
+                        <HBox alignment="CENTER_LEFT" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="Calcola costo nuova offerta sulla base dei" />
+                              <TextField fx:id="valTxtNumItem" onAction="#valSetNumItemEditableAction" onMouseClicked="#valSetNumItemEditableMouse" prefHeight="25.0" prefWidth="115.0" promptText="num">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="item più simili, con costi noti" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="valBtnCalcola" contentDisplay="CENTER" mnemonicParsing="false" onAction="#valCalcola" text="Calcola" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
                      <VBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" />
                      </VBox.margin>
-                  </Button>
+                  </GridPane>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="136.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="120.0" prefWidth="160.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="136.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="120.0" prefWidth="160.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Numero pezzi richiesti" />
+                        <TextField fx:id="valTxtNumReq" onAction="#valSetNumReqEditableAction" onMouseClicked="#valSetNumReqEditableMouse" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="Prezzo proposto" GridPane.columnIndex="3" />
+                        <TextField fx:id="valTxtPrezzo" onAction="#valSetPrezzoEditableAction" onMouseClicked="#valSetPrezzoEditableMouse" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="Costo primo (€/pezzo)" GridPane.rowIndex="1" />
+                        <TextField fx:id="valTxtCosto" onAction="#valSetCostoEditableAction" onMouseClicked="#valSetCostoEditableMouse" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="valBtnUtilizza" mnemonicParsing="false" onAction="#valUtilizza" text="Utilizza Costo calcolato" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="btnValuta" mnemonicParsing="false" onAction="#valuta" text="Valuta Offerta" GridPane.rowIndex="2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </GridPane>
                   <TextArea fx:id="valTxtResult" editable="false">
                      <VBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" />

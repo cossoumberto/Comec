@@ -113,14 +113,14 @@ public class Item implements Comparable<Item> {
 				+ this.dint + "x" + this.h + " Sp " + this.sp;
 		}
 		
-		public String toFile() {
+		/*public String toFile() {
 			if(this.categoria==Categoria.S1 || this.categoria==Categoria.S2)
 			return this.codice + ";" + this.categoria + ";" + this.materiale + ";" + this.dint + ";" 
 					+ this.dest + ";" + this.sp + ";" + this.h + ";";
 			else
 				return this.codice + ";;" + this.materiale + ";" + this.dint + ";" 
 				+ this.dest + ";" + this.sp + ";" + this.h + ";";
-		}
+		}*/
 
 
 		@Override
