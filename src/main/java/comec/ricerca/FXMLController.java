@@ -1404,12 +1404,15 @@ public class FXMLController {
     	if(percM!=null) {
     		valTxtResult.setText("Il prezzo di vendita applicato risulta essere " + v.getPrezzo_singolo() + " €/pezzo con un margine di "
     						+ model.setDecimali((v.getPrezzo_singolo()-v.getCosto_primo()), 2) + " €/pezzo\n"
-    						+ "Il margine calcolato per l'offerta proposta è pari a " + v.getMargine() + " € ed è maggiore del "
-    						+ model.setDecimali(percM,2) + " % delle vendite note (" + model.numVenditeNote() + ")\n"
-    						+ "Il margine rappresenta il " 
+    						+ "Il margine calcolato per l'offerta proposta è pari a " + model.setDecimali(v.getMargine(), 2)
+    						+ " € ed è maggiore del "
+    						+ model.setDecimali(percM,2) + " % delle vendite note (" + model.numVenditeNote() + ")\n");
+    		if(v.getMargine()>=0)
+    			valTxtResult.appendText("Il margine rappresenta il " 
     						+ model.setDecimali(100*(v.getMargine()/v.getImporto()), 2) + " % dell'importo"
     						+ " (in media questa percentuale è pari al " 
     						+ model.setDecimali((model.totMargini()/model.totImporti())*100, 2) + " %)");
+    		else valTxtResult.appendText("MARGINE NEGATIVO!");
     	} else valTxtResult.setText("Non sono disponibili vendite note");
     	
     }
