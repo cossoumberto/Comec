@@ -690,12 +690,16 @@ public class FXMLController {
     	try {
     		if(!strDint.equals("") && strDint!=null)
     			dint = Double.parseDouble(strDint);
+    		else throw new NumberFormatException();
     		if(!strDest.equals("") && strDest!=null)
     			dest = Double.parseDouble(strDest);
+    		else throw new NumberFormatException();
     		if(!strH.equals("") && strH!=null)
     			h = Double.parseDouble(strH);
+    		else throw new NumberFormatException();
     		if(!strSp.equals("") && strSp!=null)
     			sp = Double.parseDouble(strSp);
+    		else throw new NumberFormatException();
     		if(dint>=dest || sp>h)
     			throw new NumberFormatException();
     	} catch (NumberFormatException e) {
@@ -828,8 +832,9 @@ public class FXMLController {
     	Double h = null;
     	Double sp = null;
     	try {
-    		if(codice.equals("") || (!aggRadioS1.isSelected() && !aggRadioS2.isSelected() && !aggRadioAltro.isSelected()) ||
-    				materiale==null )
+    		if(codice==null || codice.equals("") || (!aggRadioS1.isSelected() && !aggRadioS2.isSelected() && !aggRadioAltro.isSelected()) ||
+    				materiale==null || strDint==null || strDint.equals("") ||  strDest==null || strDest.equals("") ||
+    				strH==null || strH.equals("") || strSp==null || strSp.equals("") )
     			throw new NumberFormatException();
     		dint = Double.parseDouble(strDint);
     		dest = Double.parseDouble(strDest);

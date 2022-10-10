@@ -152,7 +152,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Selezionare un Item esistete per aggiornarlo o eliminarlo ">
+                  <Label text="Selezionare un Item esistente per aggiornarlo o eliminarlo ">
                      <VBox.margin>
                         <Insets left="20.0" top="10.0" />
                      </VBox.margin>
